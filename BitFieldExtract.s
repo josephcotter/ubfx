@@ -1,10 +1,13 @@
-        .syntax     unified
+        .syntax     unified     //assembler directives
         .cpu        cortex-m4
         .text
         .thumb_func
         .align       2
 
-//extern uint32_t UBFXtract(uint32_t x, uint32_t lsb, uint32_t width);
+//extern uint32_t UBFXtract(uint32_t x, uint32_t lsb, uint32_t width); external function prototype
+//x = integer bits are to be extracted from
+//lsb = index of smallest bit in desired bitfield
+//width = width of bitfield
 
         .global     UBFXtract
 UBFXtract:
